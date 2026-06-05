@@ -1,0 +1,25 @@
+{
+  "rf_r2": 0.9758,
+  "gb_r2": 0.9762,
+  "ensemble_r2": 0.9767,
+  "rf_mae": 6.53,
+  "training_samples": 2000,
+  "features": [
+    "coal_type_encoded",
+    "calorific_value",
+    "ash_content",
+    "moisture_content",
+    "sulfur_content",
+    "quantity"
+  ],
+  "coal_types": [
+    "Anthracite",
+    "Bituminous",
+    "Coking Coal",
+    "Lignite",
+    "Sub-Bituminous",
+    "Thermal Coal"
+  ],
+  "cv_mean": 0.9756,
+  "cv_std": 0.0003
+}
