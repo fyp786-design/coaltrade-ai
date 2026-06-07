@@ -1,6 +1,5 @@
 // frontend/src/pages/PricePredictionPage.js
 import React, { useState } from 'react';
-import { aiAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 const HF_MODEL_URL = 'https://coaltrade786-coaltrade-ai-model.hf.space';
