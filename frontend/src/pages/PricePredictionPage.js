@@ -156,7 +156,7 @@ const PricePredictionPage = () => {
                     <ul style={{ color: '#374151', fontSize: '0.88rem', lineHeight: 1.8, paddingLeft: 20 }}>
                       <li>Random Forest + Gradient Boosting ensemble model</li>
                       <li>Trained on 2,000+ coal market data points</li>
-                      <li>~88% prediction accuracy (R² score)</li>
+                      <li>~97% prediction accuracy (R² score)</li>
                       <li>Considers all quality parameters</li>
                     </ul>
                   </div>
