@@ -21,7 +21,7 @@ const predictPrice = async (req, res) => {
     const response = await axios.post(
       `${process.env.AI_MODEL_URL || 'http://localhost:5001'}/predict`,
       { coal_type, calorific_value, ash_content, moisture_content, sulfur_content, quantity },
-      { timeout: 10000 }
+      {  timeout: 60000  }
     );
 
     res.json({
