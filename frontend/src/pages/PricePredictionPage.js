@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { aiAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
+const HF_MODEL_URL = 'https://coaltrade786-coaltrade-ai-model.hf.space';
 
 const COAL_TYPES = ['Anthracite', 'Bituminous', 'Sub-Bituminous', 'Lignite', 'Coking Coal', 'Thermal Coal'];
 
@@ -19,17 +20,22 @@ const PricePredictionPage = () => {
   const set = (field) => (e) => setForm(f => ({ ...f, [field]: e.target.value }));
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
-    setResult(null);
-    try {
-      const res = await aiAPI.predict(form);
-      setResult(res.data.prediction);
-    } catch (err) {
-      setError(err.response?.data?.message || 'Prediction failed. Please try again.');
-    } finally { setLoading(false); }
-  };
+  e.preventDefault();
+  setLoading(true);
+  setError('');
+  setResult(null);
+  try {
+    const res = await fetch(`${HF_MODEL_URL}/predict`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form)
+    });
+    const data = await res.json();
+    setResult(data);
+  } catch (err) {
+    setError('Prediction failed. Please try again.');
+  } finally { setLoading(false); }
+};
 
   const qualityTip = (field, value) => {
     const tips = {
