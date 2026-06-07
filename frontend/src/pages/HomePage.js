@@ -38,7 +38,7 @@ const HomePage = () => {
               { label: 'Active Listings', value: insights?.totalActiveListings ?? '---', icon: '📦' },
               { label: 'Trades Completed', value: insights?.completedTrades ?? '---', icon: '✅' },
               { label: 'Active Traders', value: insights?.activeUsers ?? '---', icon: '👥' },
-              { label: 'AI Accuracy', value: '~88%', icon: '🤖' },
+              { label: 'AI Accuracy', value: '~97% ', icon: '🤖' },
             ].map((s, i) => (
               <div key={i} style={heroStyles.statBox}>
                 <div style={{fontSize: '1.6rem'}}>{s.icon}</div>
