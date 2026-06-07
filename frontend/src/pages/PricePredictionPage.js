@@ -27,7 +27,14 @@ const PricePredictionPage = () => {
     const res = await fetch(`${HF_MODEL_URL}/predict`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form)
+      body: JSON.stringify({
+        coal_type: form.coal_type,
+        calorific_value: Number(form.calorific_value),
+        ash_content: Number(form.ash_content),
+        moisture_content: Number(form.moisture_content),
+        sulfur_content: Number(form.sulfur_content),
+        quantity: Number(form.quantity)
+      })
     });
     const data = await res.json();
     setResult(data);
@@ -35,7 +42,6 @@ const PricePredictionPage = () => {
     setError('Prediction failed. Please try again.');
   } finally { setLoading(false); }
 };
-
   const qualityTip = (field, value) => {
     const tips = {
       calorific_value: value > 6500 ? '🟢 High quality' : value > 5000 ? '🟡 Medium quality' : '🔴 Low quality',
