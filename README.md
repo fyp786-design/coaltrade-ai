@@ -186,7 +186,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 - **Training Data:** 2,000 synthetic coal price records based on international market data
 - **Features:** Coal type, calorific value, ash %, moisture %, sulfur %, quantity
 - **Target:** Price per ton (USD)
-- **Accuracy:** ~88% R² score
+- **Accuracy:** ~97% R² score
 - **Framework:** scikit-learn, Flask API
 
 ---
@@ -196,9 +196,9 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 | Service | Platform |
 |---------|---------|
 | Frontend | Vercel |
-| Backend | Render.com |
-| AI Model | Render.com |
-| Database | Render.com PostgreSQL |
+| Backend | Vercel.com |
+| AI Model | Hugginfface.co |
+| Database | Neon PostgreSQL |
 
 ---
 
