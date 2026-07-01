@@ -131,7 +131,7 @@ const PricePredictionPage = () => {
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label">Quantity (tons)</label>
+                    <label className="form-label">Quantity (ton)</label>
                     <input className="form-control" type="number" step="1" min="1"
                       value={form.quantity} onChange={set('quantity')} />
                     <span className="form-hint">Larger quantities may lower the per-ton price</span>
