@@ -190,7 +190,7 @@ const ListingDetailPage = () => {
                     <form onSubmit={handleTradeSubmit}>
                       <h4 style={{marginBottom: 16, fontWeight: 600}}>Send Trade Request</h4>
                       <div className="form-group">
-                        <label className="form-label required">Quantity (tons)</label>
+                        <label className="form-label required">Quantity (ton)</label>
                         <input type="number" className="form-control" step="0.01" min="0.01"
                           max={listing.quantity} placeholder="Enter quantity"
                           value={tradeForm.quantity_requested}
