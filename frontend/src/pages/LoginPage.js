@@ -29,7 +29,7 @@ export const LoginPage = () => {
   return (
     <div style={authStyles.page}>
       <div style={authStyles.card}>
-        <div style={authStyles.logo}>⚫ CoalTrade AI</div>
+        <div style={authStyles.logo}>⚫ Coal</div>
         <h2 style={authStyles.title}>Sign In to Your Account</h2>
         <p style={authStyles.sub}>Welcome back! Please enter your details.</p>
 
